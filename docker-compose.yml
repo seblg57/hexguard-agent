@@ -1,0 +1,23 @@
+services:
+  hexguard-agent-service:
+    container_name: hexguard-agent-container
+    hostname: TARrentula-1
+    build: .
+    command: gunicorn -c /opt/hexguard-agent/hexguard/gunicorn_config.py app:app 
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+      - PYTHONUNBUFFERED=1
+      - API_TOKEN=pm4RZrqgU4iReuGaspk8
+    volumes:
+      - /etc/letsencrypt/live/vps-1eb23955.vps.ovh.net/fullchain.pem:/etc/ssl/certs/fullchain.pem:ro
+      - /etc/letsencrypt/live/vps-1eb23955.vps.ovh.net/privkey.pem:/etc/ssl/private/privkey.pem:ro
+      - /var/log/secure:/var/log/secure
+      - /var/log/audit/audit.log:/var/log/audit/audit.log
+      - /var/log/messages:/var/log/messages
+      - /opt/hexguard-agent/hexguard/suspicious_ips.db:/opt/hexguard-agent/hexguard/suspicious_ips.db
+      - /opt/hexguard-agent/hexguard/gunicorn_config.py:/opt/hexguard-agent/hexguard/gunicorn_config.py:ro
+    user: root
+
+
