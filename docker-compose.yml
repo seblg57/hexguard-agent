@@ -9,7 +9,7 @@ services:
     environment:
       - FLASK_ENV=production
       - PYTHONUNBUFFERED=1
-      - API_TOKEN=pm4RZrqgU4iReuGaspk8
+      - API_TOKEN=xxxxxxxxxxxxxxxxxxx
     volumes:
       - /etc/letsencrypt/live/vps-1eb23955.vps.ovh.net/fullchain.pem:/etc/ssl/certs/fullchain.pem:ro
       - /etc/letsencrypt/live/vps-1eb23955.vps.ovh.net/privkey.pem:/etc/ssl/private/privkey.pem:ro
