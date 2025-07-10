@@ -60,5 +60,9 @@ Log level, etc.
 🤝 Integration
 HexGuard Agent is designed to feed data into the DeathWeb framework.
 
+![Screenshot_61](https://github.com/user-attachments/assets/e7084291-7cd4-41e5-a7ae-827d93c77425)
+
+![Screenshot_59](https://github.com/user-attachments/assets/b13d0fbb-cc00-4a2b-8df2-978ae89990b6)
+
 📄 License
 This project is currently private. License to be defined.
